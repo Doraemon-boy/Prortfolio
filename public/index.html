@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devaprasath R | Engineer Portfolio</title>
+  <meta name="description" content="Engineering portfolio showcasing expertise in core engineering and code engineering." />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="core">
+  <!-- Navigation -->
+  <nav>
+    <div class="container flex-between">
+      <div class="nav-logo">DEVAPRASATH R</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <!-- Mode Switcher -->
+      <div class="mode-switcher">
+        <span class="mode-label">Core</span>
+        <button class="mode-toggle" id="modeToggle" aria-label="Switch between Core and Code modes"></button>
+        <span class="mode-label-active" id="modeLabel">Code</span>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <!-- Image (left in core, right in code) -->
+        <div class="hero-image">
+          <img id="heroImage" src="./images/mechanical-hero.jpg" alt="Engineering visualization" />
+        </div>
+
+        <!-- Text Content -->
+        <div class="hero-text">
+          <div class="hero-subtitle">Engineer</div>
+          <h1>
+            <span class="accent">Core</span> Engineering & <span class="accent">Code</span> Engineering
+          </h1>
+          <p id="heroQuote">Designing in steel.</p>
+          <button class="btn">View My Work</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 - Core -->
+        <div class="project-card" data-type="core">
+          <img src="./images/project-1.jpg" alt="Automotive Suspension System" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Core</span>
+            <h3>Automotive Suspension System</h3>
+            <p>Advanced suspension modeling and kinematic analysis using CAD.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 - Code -->
+        <div class="project-card" data-type="code">
+          <img src="./images/project-2.jpg" alt="REST API Architecture" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Code</span>
+            <h3>REST API Architecture</h3>
+            <p>Full-stack API with Node.js, Express, and real-time features.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 - Integration -->
+        <div class="project-card" data-type="integration">
+          <img src="./images/project-3.jpg" alt="IoT Dashboard" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Integration</span>
+            <h3>IoT Dashboard Integration</h3>
+            <p>Hardware sensors connected with React dashboard and Python backend.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 - Core -->
+        <div class="project-card" data-type="core">
+          <img src="./images/project-4.jpg" alt="Manufacturing Design" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Core</span>
+            <h3>Manufacturing Process Design</h3>
+            <p>Toolpath generation and manufacturing workflow optimization.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 - Code -->
+        <div class="project-card" data-type="code">
+          <img src="./images/project-5.jpg" alt="Web Platform" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Code</span>
+            <h3>Web Platform Development</h3>
+            <p>Next.js application with TypeScript and real-time database sync.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 - Integration -->
+        <div class="project-card" data-type="integration">
+          <img src="./images/project-6.jpg" alt="Robotics Control System" class="project-image" />
+          <div class="project-body">
+            <span class="project-tag">Integration</span>
+            <h3>Robotics Control System</h3>
+            <p>Mechanical arm design with embedded control and automation interface.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section (Map-Style) -->
+  <section id="expertise" class="expertise">
+    <div class="container">
+      <div class="section-title">
+        <h2>Expertise Map</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <!-- Known -->
+        <div class="expertise-level">
+          <h3>Known</h3>
+          <ul class="expertise-list">
+            <li data-mode="core">CAD (Creo, SolidWorks)</li>
+            <li data-mode="core">FEA & Simulation</li>
+            <li data-mode="code">HTML, CSS, JavaScript</li>
+            <li data-mode="code">Node.js, Express</li>
+            <li data-mode="code">React, Next.js</li>
+            <li data-mode="code">Python, Automation</li>
+          </ul>
+        </div>
+
+        <!-- Learning -->
+        <div class="expertise-level">
+          <h3>Learning</h3>
+          <ul class="expertise-list">
+            <li data-mode="core">Automotive Design Principles</li>
+            <li data-mode="core">Advanced Manufacturing</li>
+            <li data-mode="code">TypeScript</li>
+            <li data-mode="code">Databases (SQL/NoSQL)</li>
+            <li data-mode="code">Cloud & DevOps</li>
+            <li data-mode="code">API Design Patterns</li>
+          </ul>
+        </div>
+
+        <!-- Target -->
+        <div class="expertise-level">
+          <h3>Target</h3>
+          <ul class="expertise-list">
+            <li data-mode="core">Automotive Systems Integration</li>
+            <li data-mode="core">Advanced CAD Automation</li>
+            <li data-mode="code">Full-stack Systems Design</li>
+            <li data-mode="code">Scalable Architecture</li>
+            <li data-mode="code">AI/ML Integration</li>
+            <li data-mode="code">System Orchestration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I&apos;m Devaprasath R, an engineer with a unique blend of mechanical and software expertise. 
+            My work sits at the intersection of hardware and code.
+          </p>
+          <p>
+            In <strong>Core Engineering</strong>, I design mechanical systems—from automotive suspensions to precision manufacturing processes. I work with CAD tools, FEA, and bring complex assemblies to life.
+          </p>
+          <p>
+            In <strong>Code Engineering</strong>, I build scalable APIs, web applications, and automation tools that drive efficiency and solve real problems.
+          </p>
+          <p>
+            What excites me most is creating integrated systems where mechanical precision meets software elegance.
+          </p>
+        </div>
+        <img src="./images/about-hero.jpg" alt="Devaprasath R" class="about-image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Let&apos;s Connect</h2>
+        <p>Have a project in mind?</p>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:devaprasath@example.com" class="contact-link">📧 Email</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-link">💼 LinkedIn</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-link">🔗 GitHub</a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Devaprasath R. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/mode-switcher.js"></script>
+</body>
+</html>
