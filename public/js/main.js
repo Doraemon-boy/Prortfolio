@@ -45,8 +45,8 @@ const allProjects = Array.from(document.querySelectorAll('.project-card'));
 
 // Mode content definitions
 const modeContent = {
-  core: 'Designing in core.',
-  code: 'Dreaming in code.'
+  core: 'Designing in Core and Dreaming in Code',
+  code: 'Designing in Core and Dreaming in Code'
 };
 
 // Initialize mode from localStorage or default
