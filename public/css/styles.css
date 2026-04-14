@@ -303,12 +303,6 @@ nav .container {
   color: var(--accent);
 }
 
-@media (min-width: 1024px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
 .nav-toggle {
   display: block;
   background: none;
@@ -319,9 +313,33 @@ nav .container {
   padding: var(--spacing-sm);
 }
 
+.nav-links {
+  display: none;
+  flex-direction: column;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+@media (max-width: 1023px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--surface);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 200px;
+  }
+}
+
 @media (min-width: 1024px) {
-  .nav-toggle {
-    display: none;
+  .nav-links {
+    display: flex;
+    flex-direction: row;
   }
 }
 

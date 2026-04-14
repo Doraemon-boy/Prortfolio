@@ -6,13 +6,13 @@ const navLinks = document.querySelector('.nav-links');
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
   });
 
   // Close menu when link is clicked
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.style.display = 'none';
+      navLinks.classList.remove('active');
     });
   });
 }
@@ -34,8 +34,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Mode Switcher
 // Mode Switcher - Core vs Code
 const modeToggle = document.getElementById('modeToggle');
-const modeLabelCore = document.getElementById('modeLabelCore');
-const modeLabelCode = document.getElementById('modeLabelCode');
 const body = document.body;
 
 const showBtn = document.getElementById('showAllBtn');
@@ -96,7 +94,6 @@ function setMode(mode) {
 
   updateStageIcons(mode);
 
-
   // Save preference
   localStorage.setItem('portfolioMode', mode);
 }
@@ -132,34 +129,36 @@ function updateProjectsView(mode) {
   });
 }
 
-showBtn.addEventListener('click', () => {
-  modal.classList.add('active');
+if (showBtn) {
+  showBtn.addEventListener('click', () => {
+    modal.classList.add('active');
 
-  modalGrid.innerHTML = '';
+    modalGrid.innerHTML = '';
 
-  let projectsArray = Array.from(allProjects);
+    let projectsArray = Array.from(allProjects);
 
-  let mode = document.body.classList.contains('code') ? 'code' : 'core';
+    let mode = document.body.classList.contains('code') ? 'code' : 'core';
 
-  projectsArray.sort((a, b) => {
-    if (a.dataset.type === mode && b.dataset.type !== mode) return -1;
-    if (a.dataset.type !== mode && b.dataset.type === mode) return 1;
-    return 0;
+    projectsArray.sort((a, b) => {
+      if (a.dataset.type === mode && b.dataset.type !== mode) return -1;
+      if (a.dataset.type !== mode && b.dataset.type === mode) return 1;
+      return 0;
+    });
+
+    projectsArray.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.classList.remove('hidden');
+      modalGrid.appendChild(clone);
+    });
+
+    // 🔥 smooth scroll to top
+    const modalContent = document.querySelector('.modal-content');
+    modalContent.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-
-  projectsArray.forEach(card => {
-    const clone = card.cloneNode(true);
-    clone.classList.remove('hidden');
-    modalGrid.appendChild(clone);
-  });
-
-  // 🔥 smooth scroll to top
-  const modalContent = document.querySelector('.modal-content');
-  modalContent.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+}
 
 // Close modal
 closeBtn.addEventListener('click', () => {
@@ -171,17 +170,3 @@ window.addEventListener('click', (e) => {
     modal.classList.remove('active');
   }
 });
-
-
-
-// Contact Form
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for reaching out! I will get back to you soon.');
-    contactForm.reset();
-  });
-}
-
-
