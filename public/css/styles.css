@@ -648,17 +648,36 @@ body[data-mode="Code"] .quote1text:nth-last-child(3) {
 
 .modal-content {
   background: var(--bg);
-  padding: var(--spacing-xl);
+  padding: 0 var(--spacing-xl);
   width: 90%;
   max-width: 1000px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
 .modal-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: var(--bg);
+  padding: var(--spacing-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.modal-header::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--bg);
 }
 
 .modal-header h3 {
@@ -684,14 +703,6 @@ body[data-mode="Code"] .quote1text:nth-last-child(3) {
   color: var(--accent);
 }
 
-/* Modal grid */
-.modal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-
 /* Smooth modal animation */
 .projects-modal {
   opacity: 0;
@@ -705,8 +716,6 @@ body[data-mode="Code"] .quote1text:nth-last-child(3) {
 }
 
 .modal-content {
-  transform: translateY(40px) scale(0.95);
-  opacity: 0;
   transition: all 0.35s ease;
   max-height: 80vh;
   overflow-y: auto;
@@ -716,6 +725,14 @@ body[data-mode="Code"] .quote1text:nth-last-child(3) {
 .projects-modal.active .modal-content {
   transform: translateY(0) scale(1);
   opacity: 1;
+}
+
+/* Modal grid */
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
 }
 
 /* ============================================
