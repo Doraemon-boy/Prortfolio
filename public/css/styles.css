@@ -343,3 +343,150 @@ body[data-mode="Code"] .mode-toggle::after {
 .mode-icon:hover {
   opacity: 1;
 }
+
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+  margin-top: 80px;
+  padding: 0;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-quote {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+body[data-mode="Core"] .quote1text:nth-child(1),
+body[data-mode="Code"] .quote1text:nth-last-child(1) ,
+body[data-mode="Core"] .quote1text:nth-child(2),
+body[data-mode="Code"] .quote1text:nth-last-child(2) ,
+body[data-mode="Core"] .quote1text:nth-child(3),
+body[data-mode="Code"] .quote1text:nth-last-child(3) {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,100% {
+    text-shadow: 0 0 8px currentColor;
+  }
+
+  50% {
+    text-shadow: 0 0 12px currentColor;
+    text-shadow: 0 0 25px currentColor;
+  }
+}
+
+.quote1logo {
+  font-style: normal;
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+
+.hero-title {
+  text-align: center;
+}
+
+.hero-text {
+  width: 48%;
+}
+
+.hero-description {
+  text-indent: 50px;
+  text-align: justify;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  margin: 0 auto;
+  margin-bottom: var(--spacing-xl);
+  max-width: 90%;
+}
+
+.hero-interests {
+  text-align: center;
+  font-size: 8px;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
+  color: var(--text-secondary);
+  margin: 0 auto;
+  margin-bottom: var(--spacing-xl);
+  max-width: 90%;
+}
+
+.hero-image {
+  width: 48%;
+  display: flex;
+  animation: slideInImage 0.6s ease-out;
+}
+
+.hero-image img {
+  width: 90%;
+  margin: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.hero-quote:last-of-type {
+  margin-top: var(--spacing-2xl);
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;  
+}
+
+@media (min-width: 1024px) {
+  .mobile-br {
+    display: none;
+  }
+
+  .quote1span {
+    font-size: 1.5rem;
+    padding: 0 25px;
+  }
+
+  .hero-layout {
+    flex-direction: row;
+    /* align-items: center; */
+  }
+
+  body[data-mode="Code"] .hero-layout {
+    flex-direction: row-reverse;
+  }
+}
+
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--surface);
+  padding: var(--spacing-sm) 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
