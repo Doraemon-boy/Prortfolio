@@ -1,24 +1,3 @@
-// // Smooth scroll for anchor links
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function (e) {
-//     const href = this.getAttribute('href');
-//     if (href !== '#') {
-//       e.preventDefault();
-//       const target = document.querySelector(href);
-//       if (target) {
-//         target.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }
-//   });
-// });
-
-
-const body = document.body;
-const modeToggle = document.getElementById('modeToggle');
-const showBtn = document.getElementById('showAllBtn');
-const modal = document.getElementById('projectsModal');
-const closeBtn = document.querySelector('.close-modal');
-const modalGrid = document.getElementById('modalGrid');
 
 const allProjects = Array.from(document.querySelectorAll('.project-card'));
 
@@ -139,14 +118,3 @@ if (showBtn) {
     });
   });
 }
-
-// Close modal
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('active');
-  }
-});

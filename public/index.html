@@ -19,17 +19,18 @@
           <div class="mode-icon" id="modeLabelCode">🖥️</div>
         </div>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#heroSection">Home</a></li>
+          <li><a href="#projectsSection">Projects</a></li>
+          <li><a href="#expertiseSection">Expertise</a></li>
+          <li><a href="#aboutSection">About</a></li>
+          <li><a href="#contactSection">Contact</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
   </nav>
 
+  <!-- Main -->
   <main>
     <!-- Hero Section -->
     <section id="heroSection" class="hero-section">
@@ -50,19 +51,19 @@
         <!-- Main Layout -->
         <div class="hero-layout">
           <div class="hero-image">
-            <img id="heroImage" src="./images/mechanical-hero.jpg" alt="Engineering" />
+            <img id="heroImage" src="" alt="Engineering" />
           </div>
 
           <div class="hero-text">
 
             <!-- Title -->
-            <h2 id="heroTitle" class="hero-title">Core Engineering</h2>
+            <h2 id="heroTitle" class="hero-title"></h2>
 
             <!-- Description -->
-            <p class="hero-description" id="heroDescription">I work on understanding and rebuilding mechanical systems through reverse engineering, structured testing, and compliance-driven design. My focus is on analyzing how systems behave in real-world conditions and refining them for reliability, performance, and manufacturability.</p>
+            <p class="hero-description" id="heroDescription"></p>
 
             <!-- Intrests -->
-            <p class="hero-interests" id="heroInterests">Reverse Engineering • Testing & Validation • Design Compliance • Automotive Systems</p>
+            <p class="hero-interests" id="heroInterests"></p>
 
             <!-- Actions -->
             <div class="hero-actions">
@@ -75,7 +76,43 @@
         <!-- Quote 2 -->
         <p class="hero-quote" id="heroEndQuote">Focused on building systems that connect mechanical precision with intelligent software.</p>
       </div>
-    </section>   
+    </section>
+
+   <!-- Projects Section -->
+    <section id="projectsSection" class="projects-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+        </div>
+    
+        <div class="projects-grid">
+          <!-- Projects list -->
+          <div id="projectWrapper" class="project-wrapper">
+            <!-- JS will generate all projects here -->
+          </div>
+
+          <!-- Show All Button -->
+          <div class="show-all-card" id="showAllBtn">
+              <h3>Show All </h3>
+          </div>
+  
+          <!-- Popup Modal -->
+          <div id="projectsModal" class="projects-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>All Projects</h3>
+
+                <button id="closeBtn" class="modal-close" aria-label="Close">&times;</button>
+              </div>
+  
+              <div class="modal-grid" id="modalGrid">
+                <!-- JS will clone all projects here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
   </main>
 
 
