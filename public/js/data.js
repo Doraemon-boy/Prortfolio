@@ -7,7 +7,6 @@ export const Data = {
             "Title": "Core Engineering",
             "Description": "I engineer mechanical systems through reverse engineering, structured testing, and compliance-driven design. My focus is on understanding real-world behavior and refining products for reliability, performance, and long-term engineering excellence.",
             "Intrests": "3D CAD Design • Product Development • Compliance Engineering • Engineering Analysis",
-            "Icons": ['⚙️', '🚗', '🚀']
         },
 
         "Code": {
@@ -17,7 +16,6 @@ export const Data = {
             "Title": "Code Engineering",
             "Description": "I build software systems through continuous learning, rapid experimentation, and scalable development practices. My focus is on creating reliable applications, designing clean architectures, and solving real-world problems with modern technologies.",
             "Intrests": "Full-Stack Development • Backend Systems • API Design • Automation",
-            "Icons": ['💻', '🌐', '🤖']
         }
     },
     "Projects" : [
@@ -142,4 +140,68 @@ export const Data = {
             link: "#"
         }
     ],
+    "Expertise" : {
+        "foundation": {
+            "title" : "Foundation",
+            "icon" : ['⚙️','🌐'],
+            "Core": [
+            "3D CAD Modeling (Creo, CATIA V5, SolidWorks, Fusion 360, AutoCAD)",
+            "Mechanical Design Fundamentals & Assembly Structuring",
+            "Engineering Drawings, GD&T & Manufacturing Standards",
+            "Basic Simulation & Finite Element Analysis (FEA)",
+            "Manufacturing Processes & Design Principles"
+            ],
+            "Code": [
+            "Core Programming with C, C++ & Java",
+            "Frontend Development (HTML, CSS & JavaScript)",
+            "Data Structures, Algorithms & Problem Solving",
+            "Software Engineering Fundamentals & Best Practices",
+            "Version Control & Collaborative Development"
+            ]
+        },
+        "activeBuilds": {
+            "title" : "Active builds",
+            "icon" : ['🚗','💻'],
+            "Core": [
+            "Embedded Systems & ESP32-Based IoT Development",
+            "Vehicle Communication & CAN Bus Applications",
+            "Automotive Testing, Validation & Compliance Engineering",
+            "Mechanical-Electronics System Integration",
+            "Practical Product Design for Real-World Applications"
+            ],
+            "Code": [
+            "Advanced Java & Object-Oriented System Design",
+            "Modern JavaScript & Interactive Frontend Development",
+            "Building Responsive Interfaces with React",
+            "Backend APIs & Business Logic Development",
+            "Building Complete End-to-End Web Applications"
+            ]
+        },
+        "future": {
+            "title" : "Future scope",
+            "icon" : ['🚀','🤖'],
+            "Core": [
+            "Robotics & Intelligent Mechanical Systems",
+            "ECU Development, Calibration & Vehicle Diagnostics",
+            "Advanced Compliance, Homologation & Regulations",
+            "AI-Driven Engineering & Digital Twin Systems",
+            "Industrial Automation & End-to-End Product Engineering"
+            ],
+            "Code": [
+            "Artificial Intelligence & Machine Learning",
+            "Low-Level Systems Programming & Performance Engineering",
+            "Full-Stack Development & Backend Architecture",
+            "Database Systems, Cloud Computing & DevOps",
+            "Distributed Systems & Real-Time Applications"
+            ]
+        }
+    },
+    "About" : {
+        "whoIAm" : "I'm Devaprasath R — an engineer who enjoys building across both mechanical and software domains. What started as curiosity has grown into a consistent practice of designing, experimenting, and improving systems.",
+        "howIWork" : [ "I don’t see engineering as separate disciplines. Whether it’s a mechanical assembly or a software system, I approach problems the same way — break them down, understand their behavior, and build solutions that are simple, functional, and reliable." , "I aim to build systems where mechanical intelligence meets software logic." , "Most of what I build comes from interest, not obligation. I enjoy the process of figuring things out, connecting ideas, and gradually moving toward more complete systems." ],
+        "perspectives" : "Insights and feedback from collaborators, mentors, and teams will be reflected here over time.",
+    },
 };
+
+
+              

@@ -1,6 +1,7 @@
 import "./data.js"
 import { Data } from "./data.js";
 
+const html = document.documentElement;
 const body = document.body;
 
 const desktop = window.matchMedia("(min-width: 1024px)");
@@ -18,6 +19,10 @@ const heroImage = document.querySelector('#heroImage');
 const heroTitle = document.querySelector('#heroTitle');
 const heroDescription = document.querySelector('#heroDescription');
 const heroIntersts = document.querySelector('#heroInterests');
+const expertiseMap = document.querySelector('#expertiseMap');
+const whoIAm = document.querySelector('#whoIAm');
+const howIAm = document.querySelector('#howIAm');
+const perspectives = document.querySelector('#perspectives');
 
 // Initial runs
 renderHeroSection("Core");
@@ -25,7 +30,8 @@ renderProjects();
 modalGrid.innerHTML = generateProjects(Data.Projects)
 desktop.addEventListener("change", renderProjects);
 tablet.addEventListener("change", renderProjects);
-
+renderExpertise("Core");
+renderAbout()
 
 // Browser defaults
 window.addEventListener("load", () => {
@@ -66,8 +72,10 @@ modeToggle.addEventListener('click', () => {
   const toSet = (mode === "Code" ? "Core" : "Code");
 
   body.dataset.mode = toSet;
+  html.dataset.mode = toSet;
 
   renderHeroSection(toSet);
+  renderExpertise(toSet);
 })
 
 // Projects
@@ -92,10 +100,55 @@ window.addEventListener('click', (e) => {
 });
 
 
-
-
 // Functions
-function renderHeroSection(mode) {
+function renderAbout () {
+  const howIAmPText = Data.About.howIWork.map(pTag => `<p>${pTag}</p>`).join('');
+  
+  whoIAm.innerHTML = `
+      <h3>Who I Am</h3>
+      <p class="effect">${Data.About.whoIAm}</p>
+    `;
+  
+  howIAm.innerHTML = `
+      <h3>How I Work</h3>
+      ${howIAmPText}
+    `;
+
+  perspectives.innerHTML = `
+      <h3>Perspectives</h3>
+      <p>${Data.About.perspectives}</p>
+    `;
+
+}
+
+function renderExpertise (mode) {
+  expertiseMap.innerHTML = (
+    generateExpertiseCard ("foundation",mode) + 
+    generateExpertiseCard ("activeBuilds",mode) + 
+    generateExpertiseCard ("future",mode)
+  );
+}
+
+function generateExpertiseCard (level, mode) {
+  const data = Data.Expertise[level];
+  const iconIndex = (mode === "Core"? 0 : 1);
+  const listHTML = data[mode].map( v => {
+    return `
+      <li>${v}</li>    
+    `
+  }).join("");
+
+  return `
+    <div class="expertise-level ${level==="activeBuilds" ? "highlight" : ""}" data-icon="${data.icon[iconIndex]}">
+      <h3>${data.title}</h3>
+      <ul class="expertise-list">
+        ${listHTML}       
+      </ul>
+    </div>
+  `;
+}
+
+function renderHeroSection (mode) {
   heroImage.src = Data.Personal[mode].imgSrc;
   heroImage.alt = Data.Personal[mode].imgAlt;
   heroTitle.innerHTML = Data.Personal[mode].Title;
