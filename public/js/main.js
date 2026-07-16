@@ -150,7 +150,6 @@ function renderAbout () {
       <h3>Perspectives</h3>
       <p>${Data.About.perspectives}</p>
     `;
-
 }
 
 function renderExpertise (mode) {
