@@ -23,6 +23,8 @@ const expertiseMap = document.querySelector('#expertiseMap');
 const whoIAm = document.querySelector('#whoIAm');
 const howIAm = document.querySelector('#howIAm');
 const perspectives = document.querySelector('#perspectives');
+const contactHeader = document.querySelector('#contactHeader');
+const contactPanel = document.querySelector('#contactPanel');
 
 // Initial runs
 renderHeroSection("Core");
@@ -31,7 +33,8 @@ modalGrid.innerHTML = generateProjects(Data.Projects)
 desktop.addEventListener("change", renderProjects);
 tablet.addEventListener("change", renderProjects);
 renderExpertise("Core");
-renderAbout()
+renderAbout();
+renderContact();
 
 // Browser defaults
 window.addEventListener("load", () => {
@@ -99,8 +102,37 @@ window.addEventListener('click', (e) => {
   }
 });
 
-
 // Functions
+function renderContact () {
+  contactHeader.innerHTML = ` 
+      <h2>${Data.Contact.title}</h2>
+      <p class="contact-subtitle">${Data.Contact.subTitle}</p>
+      <p class="contact-subtitle small">${Data.Contact.subTitle2}</p>
+    `
+
+  contactPanel.innerHTML = `
+      <a href="mailto:${Data.Contact.email}" class="contact-item">
+        <span class="label">Email</span>
+        <span class="value">${Data.Contact.email}</span>
+      </a>
+
+      <a href="tel:${Data.Contact.phone}" class="contact-item">
+        <span class="label">Phone</span>
+        <span class="value">${Data.Contact.phone}</span>
+      </a>
+
+      <a href="#" class="contact-item">
+        <span class="label">LinkedIn</span>
+        <span class="value">${Data.Contact.linkedIn}</span>
+      </a>
+
+      <a href="#" class="contact-item">
+        <span class="label">GitHub</span>
+        <span class="value">${Data.Contact.gitHub}</span>
+      </a>
+    `
+}
+
 function renderAbout () {
   const howIAmPText = Data.About.howIWork.map(pTag => `<p>${pTag}</p>`).join('');
   

@@ -201,7 +201,13 @@ export const Data = {
         "howIWork" : [ "I don’t see engineering as separate disciplines. Whether it’s a mechanical assembly or a software system, I approach problems the same way — break them down, understand their behavior, and build solutions that are simple, functional, and reliable." , "I aim to build systems where mechanical intelligence meets software logic." , "Most of what I build comes from interest, not obligation. I enjoy the process of figuring things out, connecting ideas, and gradually moving toward more complete systems." ],
         "perspectives" : "Insights and feedback from collaborators, mentors, and teams will be reflected here over time.",
     },
+    "Contact" : {
+        "title" : "Signal Node",
+        "subTitle" : "Open to meaningful conversations around engineering, systems, and ideas.",
+        "subTitle2" : "Transmit if something resonates.",
+        "email" : "devaprasath@example.com",
+        "phone" : "+91 63793 23624",
+        "linkedIn" : "linkedin.com/in/devaprasath",
+        "gitHub" : "github.com/devaprasath",
+    },
 };
-
-
-              

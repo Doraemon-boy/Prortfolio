@@ -969,6 +969,70 @@ body[data-mode="Code"] .quote1text:nth-last-child(3) {
 }
 
 /* ============================================
+   CONTACT SECTION
+   ============================================ */
+
+.contact-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.contact-title {
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.contact-subtitle.small {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.contact-panel {
+  max-width: 700px;
+  margin: var(--spacing-2xl) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: var(--transition-smooth);
+}
+
+.contact-item .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.contact-item .value {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.contact-item:hover {
+  transform: translateX(4px);
+}
+
+.contact-item:hover .value {
+  color: var(--accent);
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
